@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Sri Venkateswara School of Nursing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B0000 0%, #C41E3A 100%);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 20px;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+        }
+
+        .logo-section img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: white;
+            padding: 0px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .college-title {
+            text-align: left;
+        }
+
+        .college-title h1 {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        .college-title p {
+            font-size: 16px;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+        nav {
+            background-color: #6B0000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            background-color: #8B0000;
+        }
+
+        .nav-dropdown > a::after {
+            content: '▾';
+            margin-left: 6px;
+            font-size: 0.8em;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            min-width: 180px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: #333;
+            padding: 12px 16px;
+            text-align: left;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            background: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f4f4f4;
+        }
+
+        .nav-dropdown:hover .dropdown-content,
+        .nav-dropdown.open .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .course-heading {
+            color: #8B0000;
+            margin-bottom: 18px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .course-intro {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+            font-size: 18px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .course-card h2 {
+            color: #8B0000;
+            margin-bottom: 12px;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .course-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .course-card ul {
+            margin-top: 12px;
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .course-card li {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .section {
+            padding: 20px 0;
+        }
+
+        .section h2 {
+            color: #8B0000;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 15px;
+        }
+
+        .contact-section {
+            background-color: #8B0000;
+            color: white;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-bottom-color: #FFD700;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .contact-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #FFD700;
+            text-align: center;
+        }
+
+        .contact-item p {
+            line-height: 1.8;
+            text-align: center;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            color: #555;
+            font-size: 14px;
+        }
+
+         /* Footer */
+        footer {
+            background-color: #5b5656;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 0px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+
+        @media (max-width: 700px) {
+            header h1 { font-size: 28px; }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .logo-section img { width: 100px; height: 100px; }
+            .college-title h1 { font-size: 24px; }
+            .college-title p { font-size: 14px; }
+            nav ul { flex-wrap: wrap; }
+            .section h2 { font-size: 28px; }
+
+            /* mobile: stack logo and title, center-align */
+            .logo-section { flex-direction: column; align-items: center; gap: 12px; }
+            .college-title { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="Gallery/College Logo.jpg" alt="Gallery/College Logo">
+            </div>
+            <div class="college-title">
+                <h1>Sri Venkateswara School of Nursing</h1>
+                <p>Recognised by Govt. of A.P.G.O.M.S. No.162 / dt.11-09-2018</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-dropdown"><a href="about.html">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="core_values.html">Core values</a>
+                    <a href="chairman.html">Chairman</a>
+                </div>
+            </li>
+            <li><a href=#admissions>Admissions</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href=#departments>Departments</a></li>
+            <li class="nav-dropdown"><a href="campus.html">Campus</a>
+                <div class="dropdown-content">
+                    <a href="campus.html">Campus Life</a>
+                    <a href="campus-amenities.html">Amenities</a>
+                    <a href="campus-cells.html">Cells</a>
+                </div>
+            </li>
+            <li><a href=#examinations>Examinations</a></li>
+            <li><a href=#placements>Placements</a></li>
+            <li><a href=#alumni>Alumni</a></li>
+            <li><a href=#careers>Careers</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href=#login>Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 class="course-heading">Courses Offered</h2>
+        <p class="course-intro">Explore our nursing programs and professional learning opportunities.</p>
+        <div class="course-grid">
+            <div class="course-card">
+                <h2>📚 B.sc(Nursing)</h2>
+                <p>Short Summary on Course needs to update.</p>
+            </div>
+            <div class="course-card">
+                <h2>📚 B.sc BPT(Physiotherapy)</h2>
+                <p>Short Summary on Course needs to update.</p>
+            </div>
+            <div class="course-card">
+                <h2>📚 GNM(Staff Nurse)</h2>
+                <p>Short Summary on Course needs to update.</p>
+            </div>
+            <div class="course-card">
+                <h2>📚 MPHW(F)</h2>
+                <p>Short Summary on Course needs to update.</p>
+            </div>
+            <div class="course-card">
+                <h2>📚 B.sc(MLT)</h2>
+                <p>Short Summary on Course needs to update.</p>
+            </div>
+            <div class="course-card">
+                <h2>📚 DMLT</h2>
+                <p>Short Summary on Course needs to update.</p>
+            </div>
+            <div class="course-card">
+                <h2>📚 MLT</h2>
+                <p>Short Summary on Course needs to update.</p>
+            </div>
+            <div class="course-card">
+                <h2>🏥 Clinical Training</h2>
+                <p>Hands-on training at affiliated hospitals and healthcare centers for real-world experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>Sri Venkateswara School of Nursing<br>
+                       opp. APSRTC outgate, Vijaya residency backside, Anakapalle, Andhra Pradesh, India, 531001.<br>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📞 Phone</h4>
+                    <p>For Enquiries: +91-9848687733<br>
+                       Admission: +91-8897339879
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <p>inquiries@svson.edu.in<br>
+                       admission@svson.edu.in<br>
+                       support@svson.edu.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sri Venkateswara School of Nursing, Anakapalle. All rights reserved.</p>
+        <p>Recognised by Govt. of A.P.G.O.M.S. No.162 / dt.11-09-2018, A.P., VIJAYAWADA</p>
+        <p style="margin-top: 15px; font-size: 12px;">Dedicated to Excellence in Nursing Education</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                const trigger = dropdown.querySelector('a');
+                const links = dropdown.querySelectorAll('.dropdown-content a');
+                if (trigger) {
+                    trigger.addEventListener('click', function(event) {
+                        if (!dropdown.classList.contains('open')) {
+                            event.preventDefault();
+                            dropdown.classList.add('open');
+                        }
+                    });
+                }
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        dropdown.classList.remove('open');
+                    });
+                });
+            });
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.nav-dropdown')) {
+                    document.querySelectorAll('.nav-dropdown.open').forEach(dd => dd.classList.remove('open'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

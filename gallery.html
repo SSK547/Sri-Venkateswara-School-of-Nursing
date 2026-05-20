@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Gallery - Sri Venkateswara School of Nursing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B0000 0%, #C41E3A 100%);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 20px;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+        }
+
+        .logo-section img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: white;
+            padding: 0px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .college-title {
+            text-align: left;
+        }
+
+        .college-title h1 {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        .college-title p {
+            font-size: 16px;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            background-color: #6B0000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            background-color: #8B0000;
+        }
+
+        .nav-dropdown > a::after {
+            content: '▾';
+            margin-left: 6px;
+            font-size: 0.8em;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            min-width: 180px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: #333;
+            padding: 12px 16px;
+            text-align: left;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            background: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f4f4f4;
+        }
+
+        .nav-dropdown:hover .dropdown-content,
+        .nav-dropdown.open .dropdown-content {
+            display: block;
+        }
+        .container{max-width:1000px;margin:30px auto;padding:0 20px}
+        .page-title{color:#8B0000;font-size:36px;text-align:center;margin-bottom:18px;font-weight: 700;}
+        .intro{color:#555;text-align:center;margin-bottom:30px;font-size: 18px;}
+        .uploader{display:flex;justify-content:center;gap:12px;margin-bottom:20px}
+        .uploader input[type=file]{display:none}
+        .upload-btn{background:#FFD700;color:#333;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:700;cursor:pointer}
+        
+       
+        .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+        .gallery-item{background:white;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+        .gallery-item img{max-width:100%;height:auto;display:block}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .section {
+            padding: 20px 0;
+        }
+
+        .section h2 {
+            color: #8B0000;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 15px;
+        }
+
+        .contact-section {
+            background-color: #8B0000;
+            color: white;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-bottom-color: #FFD700;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .contact-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #FFD700;
+            text-align: center;
+        }
+
+        .contact-item p {
+            line-height: 1.8;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            color: #555;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #5b5656;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 0px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        @media (max-width: 700px) {
+            header h1 { font-size: 28px; }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .logo-section img { width: 100px; height: 100px; }
+            .college-title h1 { font-size: 24px; }
+            .college-title p { font-size: 14px; }
+            header h1 { font-size: 28px; }
+            nav ul { flex-wrap: wrap; }
+            .section h2 { font-size: 28px; }
+
+            /* mobile: stack logo and title, center-align */
+            .logo-section { flex-direction: column; align-items: center; gap: 12px; }
+            .college-title { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="Gallery/College Logo.jpg" alt="Gallery/College Logo">
+            </div>
+                <div class="college-title">
+                    <h1>Sri Venkateswara School of Nursing</h1>
+                    <p>Recognised by Govt. of A.P.G.O.M.S. No.162 / dt.11-09-2018</p>
+                </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-dropdown"><a href="about.html">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="core_values.html">Core values</a>
+                    <a href="chairman.html">Chairman</a>
+                </div>
+            </li>
+            <li><a href=#admissions>Admissions</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href=#departments>Departments</a></li>
+            <li class="nav-dropdown"><a href="campus.html">Campus</a>
+                <div class="dropdown-content">
+                    <a href="campus.html">Campus Life</a>
+                    <a href="campus-amenities.html">Amenities</a>
+                    <a href="campus-cells.html">Cells</a>
+                </div>
+            </li>
+            <li><a href=#examinations>Examinations</a></li>
+            <li><a href=#placements>Placements</a></li>
+            <li><a href=#alumni>Alumni</a></li>
+            <li><a href=#careers>Careers</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href=#login>Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Gallery</h2>
+        <p class="intro">From classrooms to celebrations — our journey in frames.</p>
+        <div class="uploader">
+            <input id="fileInput" type="file" accept="image/*" multiple>
+        </div>
+        <div id="dropzone" class="dropzone"></div>
+        <div id="gallery" class="gallery-grid" aria-live="polite"></div>
+    </div>
+
+     <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>Sri Venkateswara School of Nursing<br>
+                       opp. APSRTC outgate, Vijaya residency backside, Anakapalle, Andhra Pradesh, India, 531001.<br>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📞 Phone</h4>
+                    <p>For Enquiries: +91-9848687733<br>
+                       Admission: +91-8897339879
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <p>inquiries@svson.edu.in<br>
+                       admission@svson.edu.in<br>
+                       support@svson.edu.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sri Venkateswara School of Nursing, Anakapalle. All rights reserved.</p>
+        <p>Recognised by Govt. of A.P.G.O.M.S. No.162 / dt.11-09-2018, A.P., VIJAYAWADA</p>
+        <p style="margin-top: 15px; font-size: 12px;">Dedicated to Excellence in Nursing Education</p>
+    </footer>
+
+    <script>
+        (function(){
+            const fileInput = document.getElementById('fileInput');
+            const gallery = document.getElementById('gallery');
+
+            function makeImageCard(src, name){
+                const div = document.createElement('div');
+                div.className = 'gallery-item';
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = name || 'gallery image';
+                div.appendChild(img);
+                return div;
+            }
+
+            function handleFiles(files){
+                Array.from(files).forEach(file => {
+                    if (!file.type || !file.type.startsWith('image/')) return;
+                    const reader = new FileReader();
+                    reader.onload = function(e){
+                        gallery.appendChild(makeImageCard(e.target.result, file.name));
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+
+            // Load images from file input / drag-drop
+            fileInput.addEventListener('change', function(){
+                handleFiles(this.files);
+                this.value = '';
+            });
+
+
+            // Auto-load images found in the same folder (embedded list generated by the editor)
+            const autoImages = [
+                "Gallery/College Logo.jpg", "Gallery/1.jpg", "Gallery/2.jpg", "Gallery/3.jpg", "Gallery/4.jpg", "Gallery/5.jpg", "Gallery/6.jpg", "Gallery/7.jpg", "Gallery/8.jpg", "Gallery/9.jpg", "Gallery/10.jpg", "Gallery/11.jpg", "Gallery/12.jpg",
+                "Gallery/13.jpg", "Gallery/14.jpg", "Gallery/15.jpg", "Gallery/16.jpg", "Gallery/Publicity-4.jpg"
+            ];
+
+            function loadAutoImages(){
+                autoImages.forEach(src => {
+                    // Only append if file exists in same folder when opened in browser
+                    gallery.appendChild(makeImageCard(src, src));
+                });
+            }
+
+            // Allow opening dropdown on click (same interaction as other pages)
+            document.addEventListener('DOMContentLoaded', function(){
+                loadAutoImages();
+                document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                    const trigger = dropdown.querySelector('a');
+                    const links = dropdown.querySelectorAll('.dropdown-content a');
+                    if (trigger) trigger.addEventListener('click', function(e){ if (!dropdown.classList.contains('open')){ e.preventDefault(); dropdown.classList.add('open'); } });
+                    links.forEach(l=>l.addEventListener('click', ()=>dropdown.classList.remove('open')));
+                });
+                document.addEventListener('click', function(event){ if (!event.target.closest('.nav-dropdown')) document.querySelectorAll('.nav-dropdown.open').forEach(d=>d.classList.remove('open')); });
+            });
+        })();
+    </script>
+</body>
+</html>
