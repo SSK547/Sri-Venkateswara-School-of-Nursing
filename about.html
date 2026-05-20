@@ -16,6 +16,29 @@
             background: #f4f4f4;
             line-height: 1.6;
         }
+        /* Responsive images: ensure images scale down on small screens */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Content card images should center and fit their container */
+        .content-card img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 12px;
+        }
+        /* Keep logo square but allow it to shrink on small screens */
+        .logo-section img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
         header {
             background: linear-gradient(135deg, #8B0000 0%, #C41E3A 100%);
             color: white;
@@ -297,10 +320,9 @@
         <div class="content-card">
             <h3>&#127891; About Us</h3>
             <p style="text-indent:80px;">Sri Venkateswara School of Nursing is a distinguished institution dedicated to nurturing the next generation of healthcare professionals. Established with a vision to provide quality nursing education, the school has consistently upheld high standards of academic excellence, clinical training, and ethical practice.</p>
-            <img src="Gallery/College_Building_AI.jpg" 
+                <img src="Gallery/College_Building_AI.jpg" 
                     alt="Sri Venkateswara School of Nursing building with female students - Modern Theme" 
-                    width="650" height="400"
-                    style="display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    style="display: block; margin: 30px auto;">
              <p style="text-indent:80px;"> We believe that nursing is not just a profession, but a calling rooted in compassion, service, and responsibility. Our institution strives to instill these values in every student, ensuring they graduate as competent, confident, and caring nurses ready to serve society.</p>
 
             <h3>&#127963; Our Legacy</h3>
