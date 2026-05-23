@@ -10,17 +10,20 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             background: #f4f4f4;
             line-height: 1.6;
         }
+
         header {
             background: linear-gradient(135deg, #8B0000 0%, #C41E3A 100%);
             color: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -30,11 +33,13 @@
             padding: 18px 20px;
             gap: 20px;
         }
+
         .logo-section {
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         .logo-section img {
             width: 140px;
             height: 140px;
@@ -42,6 +47,7 @@
             background: white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
+
         .college-title h1 {
             font-size: 38px;
             font-weight: bold;
@@ -49,11 +55,13 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             letter-spacing: 1px;
         }
+
         .college-title p {
             font-size: 16px;
             opacity: 0.95;
             letter-spacing: 0.5px;
         }
+
         nav {
             background-color: #6B0000;
         }
@@ -136,33 +144,39 @@
             margin-bottom: 15px;
             text-align: center;
         }
+
         .section-intro {
             text-align: center;
             color: #555;
             margin-bottom: 30px;
             font-size: 18px;
         }
+
         .content-card {
             background: white;
             border-radius: 12px;
             padding: 28px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
         }
+
         .content-card h3 {
             color: #8B0000;
             font-size: 26px;
             margin-bottom: 18px;
         }
+
         .content-card p {
             color: #444;
             line-height: 1.8;
             margin-bottom: 18px;
             text-align: justify;
         }
+
         .content-card ul {
             list-style: disc inside;
             color: #444;
         }
+
         .content-card li {
             margin-bottom: 10px;
         }
@@ -185,26 +199,31 @@
             color: white;
             margin-top: 45px;
         }
+
         .contact-section h2 {
             color: white;
             border-bottom-color: #FFD700;
         }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin-top: 30px;
         }
+
         .contact-item h4 {
             font-size: 18px;
             margin-bottom: 10px;
             color: #FFD700;
             text-align: center;
         }
+
         .contact-item p {
             line-height: 1.8;
             text-align: center;
         }
+
         footer {
             background-color: #5b5656;
             color: white;
@@ -212,38 +231,58 @@
             padding: 20px 10px;
             margin-top: 0px;
         }
+
         @media (max-width: 700px) {
-            header h1 { font-size: 28px; }
+            header h1 {
+                font-size: 28px;
+            }
+
             .header-content {
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
             }
+
             nav ul {
                 flex-direction: wrap;
             }
 
-        /* mobile: stack logo and title, center-align */
-        .logo-section {
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
+            /* mobile: stack logo and title, center-align */
+            .logo-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
 
-        .logo-section img {
-            width: 100px;
-            height: 100px;
-        }
+            .logo-section img {
+                width: 100px;
+                height: 100px;
+            }
 
-        .college-title {
-            text-align: center;
+            .college-title {
+                text-align: center;
+            }
+
+            .college-title h1 {
+                font-size: 24px;
+            }
+
+            .college-title p {
+                font-size: 14px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .logo-section {
+                flex-direction: column; align-items: center; gap: 12px;
+            }
+
+            .college-title {
+                text-align: center;
+            }
         }
-        .college-title h1 { font-size: 24px; }
-        .college-title p { font-size: 14px; }
-        .section h2 { font-size: 28px; }
-        .logo-section { flex-direction: column; align-items: center; gap: 12px; }
-        .college-title { text-align: center; }
-    }
     </style>
 </head>
 <body>
@@ -301,32 +340,32 @@
             </ul>
         </div>
     </div>
-        <section class="section contact-section" id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h4>📍 Address</h4>
-                        <p>Sri Venkateswara School of Nursing<br>
-                           opp. APSRTC outgate, Vijaya residency backside, Anakapalle, Andhra Pradesh, India, 531001.<br>
-                        </p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>📞 Phone</h4>
-                        <p>For Enquiries: +91-9848687733<br>
-                           Admission: +91-8897339879
-                        </p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>📧 Email</h4>
-                        <p>inquiries@svson.edu.in<br>
-                           admission@svson.edu.in<br>
-                           support@svson.edu.in
-                        </p>
-                    </div>
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>Sri Venkateswara School of Nursing<br>
+                       opp. APSRTC outgate, Vijaya residency backside, Anakapalle, Andhra Pradesh, India, 531001.<br>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📞 Phone</h4>
+                    <p>For Enquiries: +91-9848687733<br>
+                       Admission: +91-8897339879
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <p>inquiries@svson.edu.in<br>
+                       admission@svson.edu.in<br>
+                       support@svson.edu.in
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2026 Sri Venkateswara School of Nursing, Anakapalle. All rights reserved.</p>
         <p>Recognised by Govt. of A.P.G.O.M.S. No.162 / dt.11-09-2018, A.P., VIJAYAWADA</p>

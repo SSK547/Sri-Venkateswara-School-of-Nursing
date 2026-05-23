@@ -135,17 +135,73 @@
         .nav-dropdown.open .dropdown-content {
             display: block;
         }
-        .container{max-width:1000px;margin:30px auto;padding:0 20px}
-        .page-title{color:#8B0000;font-size:36px;text-align:center;margin-bottom:18px;font-weight: 700;}
-        .intro{color:#555;text-align:center;margin-bottom:30px;font-size: 18px;}
-        .uploader{display:flex;justify-content:center;gap:12px;margin-bottom:20px}
-        .uploader input[type=file]{display:none}
-        .upload-btn{background:#FFD700;color:#333;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:700;cursor:pointer}
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            color: #8B0000;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .intro {
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .uploader {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .uploader input[type=file] {
+            display:none;
+        }
+
+        .upload-btn {
+            background: #FFD700;
+            color: #333;
+            padding:10px 18px;
+            border-radius:6px;
+            text-decoration:none;
+            font-weight:700;
+            cursor:pointer;
+        }
         
-       
-        .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-        .gallery-item{background:white;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
-        .gallery-item img{max-width:100%;height:auto;display:block}
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            display:block;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -210,23 +266,53 @@
             margin: 5px 0;
         }
         @media (max-width: 700px) {
-            header h1 { font-size: 28px; }
+            header h1 { 
+                font-size: 28px;
+            }
+
             .header-content {
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
                 padding: 30px 20px;
             }
-            .logo-section img { width: 100px; height: 100px; }
-            .college-title h1 { font-size: 24px; }
-            .college-title p { font-size: 14px; }
-            header h1 { font-size: 28px; }
-            nav ul { flex-wrap: wrap; }
-            .section h2 { font-size: 28px; }
 
+            .logo-section img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .college-title h1 {
+                font-size: 24px;
+            }
+
+            .college-title p {
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+            
             /* mobile: stack logo and title, center-align */
-            .logo-section { flex-direction: column; align-items: center; gap: 12px; }
-            .college-title { text-align: center; }
+            .logo-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .college-title {
+                text-align: center;
+            }
+            
         }
     </style>
 </head>

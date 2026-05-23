@@ -62,7 +62,7 @@
             letter-spacing: 0.5px;
         }
 
-       nav {
+        nav {
             background-color: #6B0000;
         }
 
@@ -151,7 +151,6 @@
             color: #555;
             font-size: 18px;
         }
-
 
         .campus-details > div {
             display: none;
@@ -287,7 +286,10 @@
         }
 
         @media (max-width: 700px) {
-            header h1 { font-size: 28px; }
+            header h1 {
+                font-size: 28px;
+            }
+
             .header-content {
                 flex-direction: column;
                 gap: 15px;
@@ -298,26 +300,36 @@
             nav ul {
                 flex-direction: wrap;
             }
-            .college-title h1 { font-size: 24px; }
-            .college-title p { font-size: 14px; }
-             .section h2 { font-size: 28px; }
 
-        /* mobile: stack logo and title, center-align */
-        .logo-section {
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
+            .college-title h1 {
+                font-size: 24px;
+            }
 
-        .logo-section img {
-            width: 100px;
-            height: 100px;
-        }
+            .college-title p {
+                font-size: 14px;
+            }
 
-        .college-title {
-            text-align: center;
+            .section h2 {
+                font-size: 28px;
+            }
+
+            /* mobile: stack logo and title, center-align */
+            .logo-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo-section img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .college-title {
+                text-align: center;
+            }
+
         }
-    }
     </style>
 </head>
 <body>
@@ -365,9 +377,6 @@
     <div class="container">
         <h1 class="page-title">Campus Experience</h1>
         <p class="page-intro">Explore student life and campus culture at Sri Venkateswara School of Nursing. For facilities details, visit the dedicated subpages.</p>
-
-        
-
         <section class="life-section" id="campus-life">
             <h2>About Campus Life</h2>
             <p>Campus life at Sri Venkateswara School of Nursing is built around a strong sense of community, academic support, and well-being. Students benefit from a balanced daily routine that blends classroom learning with hands-on practice, peer activities, and personal growth.</p>
@@ -389,32 +398,32 @@
         </section>
     </div>
 
-        <section class="section contact-section" id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h4>📍 Address</h4>
-                        <p>Sri Venkateswara School of Nursing<br>
-                           opp. APSRTC outgate, Vijaya residency backside, Anakapalle, Andhra Pradesh, India, 531001.<br>
-                        </p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>📞 Phone</h4>
-                        <p>For Enquiries: +91-9848687733<br>
-                           Admission: +91-8897339879
-                        </p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>📧 Email</h4>
-                        <p>inquiries@svson.edu.in<br>
-                           admission@svson.edu.in<br>
-                           support@svson.edu.in
-                        </p>
-                    </div>
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>Sri Venkateswara School of Nursing<br>
+                       opp. APSRTC outgate, Vijaya residency backside, Anakapalle, Andhra Pradesh, India, 531001.<br>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📞 Phone</h4>
+                    <p>For Enquiries: +91-9848687733<br>
+                       Admission: +91-8897339879
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <p>inquiries@svson.edu.in<br>
+                       admission@svson.edu.in<br>
+                       support@svson.edu.in
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 Sri Venkateswara School of Nursing, Anakapalle. All rights reserved.</p>
